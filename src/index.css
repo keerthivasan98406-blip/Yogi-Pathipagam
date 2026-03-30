@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { scroll-behavior: smooth; box-sizing: border-box; }
+  body {
+    font-family: 'Poppins', sans-serif;
+    @apply bg-slate-50 dark:bg-gray-950 text-gray-800 dark:text-gray-200 transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .tamil-text {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    line-height: 2;
+    letter-spacing: 0;
+  }
+  /* Also catch any Tamil unicode that doesn't have the class */
+  [lang="ta"] { font-family: 'Noto Sans Tamil', sans-serif; }
+
+  .btn-primary {
+    @apply bg-[#1a3a6b] hover:bg-[#142d55] text-white font-semibold px-5 py-2 rounded-sm transition-colors duration-200 text-sm;
+  }
+  .btn-gold {
+    @apply bg-[#c8922a] hover:bg-[#b07d22] text-white font-semibold px-5 py-2 rounded-sm transition-colors duration-200 text-sm;
+  }
+  .btn-outline {
+    @apply border border-[#1a3a6b] text-[#1a3a6b] hover:bg-[#1a3a6b] hover:text-white font-semibold px-5 py-2 rounded-sm transition-colors duration-200 text-sm dark:border-amber-400 dark:text-amber-400;
+  }
+
+  .section-box {
+    @apply border border-gray-200 dark:border-gray-700 rounded-sm bg-white dark:bg-gray-900 mb-5 shadow-sm overflow-hidden;
+  }
+  .section-head {
+    @apply bg-[#1a3a6b] text-white font-semibold text-sm px-4 py-2.5 tracking-wide;
+  }
+  .section-body {
+    @apply p-4 text-sm text-gray-700 dark:text-gray-300 leading-relaxed;
+  }
+}
+
+/* ── Marquee ── */
+@keyframes ticker {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.ticker-inner {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: ticker 40s linear infinite;
+}
+.ticker-inner:hover {
+  animation-play-state: paused;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #1a3a6b; border-radius: 4px; }

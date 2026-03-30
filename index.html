@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tamizhosai International Journal for Tamil Studies - A peer-reviewed, open access academic journal published by Yogi Pathipagam." />
+    <meta name="keywords" content="Tamil studies, Tamil research, Tamil literature, academic journal, peer-reviewed, open access" />
+    <meta property="og:title" content="Tamizhosai International Journal for Tamil Studies" />
+    <meta property="og:description" content="A Global Platform for Tamil Research & Literature" />
+    <title>Tamizhosai | International Journal for Tamil Studies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Noto Sans Tamil loaded first for proper Tamil rendering -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      /* Force Tamil Unicode block (U+0B80–U+0BFF) to always use Noto Sans Tamil */
+      @font-face {
+        font-family: 'Poppins';
+        src: local('Noto Sans Tamil');
+        unicode-range: U+0B80-0BFF;
+      }
+      .tamil-text,
+      [lang="ta"] {
+        font-family: 'Noto Sans Tamil', sans-serif !important;
+        line-height: 2 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
