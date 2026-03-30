@@ -66,11 +66,11 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Dark mode + mobile menu */}
+          {/* Dark mode (desktop only) + mobile menu */}
           <div className="flex items-center gap-2 shrink-0">
             <button
               onClick={toggle}
-              className="p-2 rounded text-blue-200 hover:text-amber-300 hover:bg-white/10 transition-colors"
+              className="hidden lg:block p-2 rounded text-blue-200 hover:text-amber-300 hover:bg-white/10 transition-colors"
               aria-label="Toggle dark mode"
             >
               {dark ? <Sun size={16} /> : <Moon size={16} />}
@@ -103,6 +103,13 @@ export default function Navbar() {
               {l.label}
             </Link>
           ))}
+          <button
+            onClick={toggle}
+            className="flex items-center gap-3 w-full px-5 py-3 text-sm text-blue-100 hover:bg-[#1a3a6b] border-b border-white/10"
+          >
+            {dark ? <Sun size={15} /> : <Moon size={15} />}
+            {dark ? 'Light Mode' : 'Dark Mode'}
+          </button>
         </nav>
       )}
 
