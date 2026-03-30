@@ -32,20 +32,20 @@ export default function Navbar() {
       </div>
 
       {/* ── BAR 2: LOGO BAR — static, no ticker ── */}
-      <div className="bg-[#1a3a6b] dark:bg-[#0d2240] py-3 px-4 shadow-md">
-        <div className="max-w-6xl mx-auto flex items-center justify-between gap-4">
+      <div className="bg-[#1a3a6b] dark:bg-[#0d2240] py-3 px-4 shadow-md overflow-hidden">
+        <div className="max-w-6xl mx-auto flex items-center justify-between gap-2">
 
           {/* Logo + name */}
-          <Link to="/" className="flex items-center gap-3 group shrink-0">
+          <Link to="/" className="flex items-center gap-3 group shrink-0 min-w-0">
             <img
               src="/logo.png"
               alt="Yogi Pathipagam – Tamizhosai Journal"
-              className="h-14 w-14 object-cover rounded-full border-2 border-amber-400 shadow-lg bg-white shrink-0"
+              className="h-12 w-12 object-cover rounded-full border-2 border-amber-400 shadow-lg bg-white shrink-0"
             />
-            <div className="leading-snug">
-              <p className="font-black text-white text-base tracking-wide">Yogi Pathipagam</p>
-              <p className="text-amber-300 font-semibold text-xs">Tamizhosai International Journal</p>
-              <p className="text-blue-200 text-[10px]">for Tamil Language and Literary Studies</p>
+            <div className="leading-snug min-w-0">
+              <p className="font-black text-white text-sm tracking-wide truncate">Yogi Pathipagam</p>
+              <p className="text-amber-300 font-semibold text-xs truncate">Tamizhosai International Journal</p>
+              <p className="text-blue-200 text-[10px] hidden sm:block">for Tamil Language and Literary Studies</p>
             </div>
           </Link>
 
